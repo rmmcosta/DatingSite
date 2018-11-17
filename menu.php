@@ -5,7 +5,7 @@
 <?php
     if(isLogged()){
 ?>
-        <li><a href="#">(<?php echo getSessionUsername();?>)</a></li>
+        <li><a href="profile.php">(<?php echo getSessionUsername();?>)</a></li>
         <li><a href="logout.php">Logout</a></li>
 <?php
     } else{
