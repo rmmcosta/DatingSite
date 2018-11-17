@@ -1,5 +1,6 @@
 <?php
     $_title = 'Login';
+    require_once('session.php');
     include_once('header.php');
     include_once('menu.php');
     require_once('commonclasses.php');
