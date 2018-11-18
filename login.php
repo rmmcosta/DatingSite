@@ -24,12 +24,16 @@
 
     if($_showForm){
 ?>
+    
     <form method='post' action='<?php echo $_SERVER['PHP_SELF'];?>'>
+    <fieldset class="fieldsetLogin">
+        <legend>Login</legend>
         <label for='username'>Username</label>
         <input type='text' name='username' value='<?php echo $_username; ?>'>
         <label for='password'>Password</label>
         <input type='password' name='password' value='<?php echo $_password; ?>'>
-        <input type='submit' name='submit' value='Submit'>
+        <input type='submit' name='submit' value='Login'>
+    </fieldset>
     </form>
 <?php
     } else{

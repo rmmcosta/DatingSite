@@ -1,12 +1,13 @@
 <?php
     require_once('session.php');
 ?>
+    <div class="loginmenu">
     <ul>
 <?php
     if(isLogged()){
 ?>
-        <li><a href="profile.php">(<?php echo getSessionUsername();?>)</a></li>
         <li><a href="logout.php">Logout</a></li>
+        <li><a href="profile.php?userid=<?php echo getSessionUserid(); ?>">(<?php echo getSessionUsername(); ?>)</a></li>
 <?php
     } else{
 ?>
@@ -16,3 +17,4 @@
     }
 ?>
     <ul>
+    </div>

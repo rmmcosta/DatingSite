@@ -1,0 +1,67 @@
+footer {
+    margin-top: 30rem;;
+    left:45%;
+    position: absolute;
+}
+
+.loginmenu{
+    background-color: orangered;
+    width:100%;
+    min-height: 2rem;
+}
+
+.loginmenu ul {
+    list-style-type: none;
+    padding: 0.1rem 0;
+}
+
+.loginmenu ul li {
+    float:right;
+    border-left: 1px solid silver;
+    padding: 0.2rem 0.5rem;
+}
+
+.content {
+    display: block;
+    margin-top: 2rem;
+}
+
+.fieldsetLogin{
+    width:20%;
+    left:40%;
+    position: absolute;
+}
+
+.fieldsetLogin input, .fieldsetLogin label{
+    width:100%;
+    padding: 0.5rem 0.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.fieldsetRegister{
+    width:40%;
+    left:30%;
+    position: absolute;
+}
+
+.fieldsetRegister input, .fieldsetRegister label{
+    width:100%;
+    padding: 0.5rem 0.1rem;
+    margin-bottom: 0.2rem;
+}
+
+input[type='submit'] {
+    background: orange;
+    color:brown;
+    font-weight: bold;
+  }
+
+.fieldsetProfile {
+    width:60%;
+}
+
+.fieldsetProfile input, .fieldsetProfile label{
+    width:100%;
+    padding: 1rem .5rem;
+    margin-bottom: 0.7rem;
+}

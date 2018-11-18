@@ -16,4 +16,8 @@
     function getSessionUsername(){
         return $_SESSION['username'];
     }
+
+    function getSessionUserid(){
+        return $_SESSION['userid'];
+    }
 ?>

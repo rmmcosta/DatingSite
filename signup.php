@@ -29,7 +29,7 @@
 ?>
 
         <form method="post" action="<?php $_SERVER['PHP_SELF'] ?>">
-            <fieldset>
+            <fieldset class="fieldsetRegister">
                 <legend>Registration Info</legend>
                 <label for="username">Username</label> 
                 <input type="text" name="username" value='<?php echo $_username;?>'>
@@ -37,7 +37,7 @@
                 <input type="password" name="password" value='<?php echo $_password;?>'>
                 <label for="retypepassword">Retype Password</label>
                 <input type="password" name="retypepassword" value='<?php echo $_retypepassword;?>'>
-                <input type="submit" name="submit" value="Submit">
+                <input type="submit" name="submit" value="Register">
             </fieldset>
         </form>
 
