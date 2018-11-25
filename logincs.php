@@ -17,10 +17,9 @@
             return $isValid; 
         }
 
-        $_dbc = mysqli_connect(DB_LOCATION,DB_USER,DB_PWD,DB_NAME)
-            or die("Unable to connect ot the $_dbname database!");
+        $_dbc = connectDB();
 
-        $_query = "Select id from ".TABLE_USERS." where username='$username' and password=sha('$password');";
+        $_query = "Select id, isadmin from ".TABLE_USERS." where username='$username' and password=sha('$password');";
 
         $_data = mysqli_query($_dbc,$_query);
         $_numRows = mysqli_num_rows($_data);
@@ -35,8 +34,8 @@
 
         //put in session
         $row=mysqli_fetch_array($_data,MYSQLI_ASSOC);
-        setUserSession($username,$row['id']);
-        setUserCookies($username,$row['id']);
+        setUserSession($username,$row['id'],$row['isadmin']);
+        setUserCookies($username,$row['id'],$row['isadmin']);
         return $isValid;
 
     }

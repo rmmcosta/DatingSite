@@ -12,7 +12,7 @@
     }
 
     function getUser($userid){
-        $_dbc = mysqli_connect(DB_LOCATION,DB_USER,DB_PWD,DB_NAME);
+        $_dbc = connectDB();
         $_query = "Select ".TABLE_USERSINFO.".firstname, ".TABLE_USERSINFO."
         .lastname, ".TABLE_USERSINFO.".birthdate, ".TABLE_USERSIMAGE.
         ".image from ".TABLE_USERSINFO." left join ".TABLE_USERSIMAGE."
@@ -33,7 +33,7 @@
     }
 
     function getUsers(){
-        $_dbc = mysqli_connect(DB_LOCATION,DB_USER,DB_PWD,DB_NAME);
+        $_dbc = connectDB();
         $_query = "Select ".TABLE_USERS.".id,"
         .TABLE_USERS.".username, ".TABLE_USERSIMAGE.
         ".image from ".TABLE_USERS." left join ".TABLE_USERSIMAGE."
@@ -65,7 +65,7 @@
     }
 
     function createOrUpdateUser($user){
-        $_dbc = mysqli_connect(DB_LOCATION,DB_USER,DB_PWD,DB_NAME);
+        $_dbc = connectDB();
         $_existsInfoQuery = "Select 1 from ".TABLE_USERSINFO." where datinguserid = $user->_userid;";
         $_existsInfo = mysqli_query($_dbc,$_existsInfoQuery);
         $_updateInfo = ( mysqli_num_rows($_existsInfo)==1 ? 1 : 0 );
@@ -89,7 +89,6 @@
             '$user->_birthdate'
             );";
         }
-        echo $_createOrUpdateInfo;
         mysqli_query($_dbc,$_createOrUpdateInfo);
 
         $_createOrUpdateImage='';
@@ -104,7 +103,6 @@
             '$user->_image'
             );";
         }
-        echo $_createOrUpdateImage;
         mysqli_query($_dbc,$_createOrUpdateImage);
 
         mysqli_close($_dbc);

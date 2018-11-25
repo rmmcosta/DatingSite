@@ -17,8 +17,7 @@
         }
 
         
-        $_dbc = mysqli_connect(DB_LOCATION,DB_USER,DB_PWD,DB_NAME)
-            or die("Unable to connect ot the $_dbname database!");
+        $_dbc = connectDB();
 
         $_query = "insert into ".TABLE_USERS." (username, password) 
         values ('$username', sha('$pwd'));";

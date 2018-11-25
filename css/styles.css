@@ -1,24 +1,42 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 footer {
-    margin-top: 30rem;;
+    margin-top: 20rem;
     left:45%;
     position: absolute;
 }
 
-.loginmenu{
-    background-color: orangered;
+.navmenu{
+    background-color: violet;
     width:100%;
-    min-height: 2rem;
+    min-height: 3rem;
+    box-shadow: .1rem 1.1rem 1rem -.5rem darkviolet;
+    border-radius: .5rem;
 }
 
-.loginmenu ul {
+.navmenu ul {
     list-style-type: none;
-    padding: 0.1rem 0;
+    padding: .5rem 0;
+    display: flex;
 }
 
-.loginmenu ul li {
-    float:right;
-    border-left: 1px solid silver;
+.navmenu ul li {
     padding: 0.2rem 0.5rem;
+}
+
+.navmenu ul li i {
+    margin-right: .1rem;
+}
+
+.navmenu a {
+    color: brown;
+}
+
+.loginmenu {
+    margin-left: auto;
+    display: flex;
 }
 
 .content {
@@ -26,22 +44,14 @@ footer {
     margin-top: 2rem;
 }
 
-.fieldsetLogin{
-    width:20%;
-    left:40%;
-    position: absolute;
+fieldset{
+    width:100%;
 }
 
 .fieldsetLogin input, .fieldsetLogin label{
     width:100%;
     padding: 0.5rem 0.1rem;
     margin-bottom: 0.2rem;
-}
-
-.fieldsetRegister{
-    width:40%;
-    left:30%;
-    position: absolute;
 }
 
 .fieldsetRegister input, .fieldsetRegister label{
@@ -65,3 +75,101 @@ input[type='submit'] {
     padding: 1rem .5rem;
     margin-bottom: 0.7rem;
 }
+
+.info {
+    background-color: rgb(16, 40, 48);
+    color:white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+table {
+    padding: 1rem;
+    border: 1px solid slateblue;
+}
+
+table th {
+    background-color: blueviolet;
+    padding: .5rem 1.5rem;
+    color: greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table td {
+    min-width: 100px;
+    border: 1px solid slateblue;
+    padding: 1rem;
+    text-align: center;
+}
+
+form {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem .5rem;
+    vertical-align: middle;
+    align-items: center;
+}
+
+form label {
+    width: 30%;
+    flex-direction: row;
+}
+
+form input, form select {
+    width: 60%;
+    flex-direction: row;
+    left: auto;
+    margin: .5rem 0;
+}
+
+form input[type='submit'] {
+    width: 40%;
+    margin-left:60%;
+}
+
+form input[type='radio'] {
+    width: 20px;
+    height: 20px;
+    margin-left:.1rem;
+    align-self: center;
+}
+
+form hr {
+    width: 100%;
+}
+
+form.Profile {
+    width: 80%;
+}
+
+body {
+    background-color: lightsteelblue;
+    padding: .5rem 1rem;
+    color: darkslateblue;
+}
+
+body hr{ 
+    height: 1px;
+    color: darkmagenta;
+    background-color: darkmagenta;
+    border: none;
+  }
+
+  .fillparent {
+      width: 100%;
+  }
+
+  .verticalalign {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .responsemissing {
+      background-color: darkslateblue;
+      color:lightyellow;
+  }

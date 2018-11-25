@@ -7,7 +7,7 @@
     require_once('imagescs.php');
     
 
-    if(!isset($_SESSION['userid'])){
+    if(!isLogged()){
         header('Location:index.php');
     }
     $getuserid = $_GET['userid'];
@@ -32,7 +32,7 @@
     }
 ?>
 
-    <form enctype="multipart/form-data" method="post" action="<?php $_SERVER['PHP_SELF']?>">
+    <form class="profile" enctype="multipart/form-data" method="post" action="<?php $_SERVER['PHP_SELF']?>">
         <fieldset class="fieldsetProfile">
             <legend>Profile</legend>
         <label for="firstname">First Name</label>
