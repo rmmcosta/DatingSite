@@ -21,7 +21,6 @@
 
         $_query = "insert into ".TABLE_USERS." (username, password) 
         values ('$username', sha('$pwd'));";
-
         $_result = mysqli_query($_dbc,$_query) 
                 or die('Unable to Register User!');
 
