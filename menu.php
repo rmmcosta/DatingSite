@@ -8,6 +8,7 @@
                 if(isLogged()) {
             ?>
             <li><a href="questionaire.php"><i class="fas fa-question-circle"></i>Questionaire</a></li>
+            <li><a href="mismatch.php"><i class="fas fa-grin-hearts"></i>Mismatch</a></li>
             <?php
                     if(isAdmin()){
                         echo '<li><a href="categories.php"><i class="fas fa-clipboard-list"></i>Categories</a></li>';
@@ -30,4 +31,5 @@
     }
 ?>
         </div>
+    </ul>
     </div>
