@@ -44,4 +44,27 @@
         mysqli_close($dbc);
         return $mismatchUser;
     }
+
+    function getMismatchByCategories($user1id, $user2id) {
+        $query= 'select count(1) topics, category 
+        from datingresponses a 
+        inner join datingresponses b 
+        on a.topicid = b.topicid 
+        and a.userid <> b.userid 
+        and a.response <> b.response 
+        and a.userid = '.$user1id.' and b.userid = '.$user2id.' 
+        inner join datingtopics 
+        on datingtopics.id = a.topicid
+		inner join datingcategories
+		on datingcategories.id = datingtopics.categoryid
+		group by category
+        ;';
+        $dbc = connectDB();
+        //result object
+        $result = mysqli_query($dbc, $query);
+        $categoriesArray = mysqli_fetch_all($result, MYSQLI_NUM);
+
+        mysqli_close($dbc);
+        return $categoriesArray;
+    }
 ?>

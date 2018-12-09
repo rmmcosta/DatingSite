@@ -26,4 +26,11 @@
         echo '<li>'.$topic.'</li>';
     }
     echo '</ul>';
+
+    $mismatchByCategories = getMismatchByCategories(getSessionUserid(), $muser->_userid);
+    echo '<br>By Categories<br><ul>';
+    for($i=0;$i<sizeof($mismatchByCategories);$i++) {
+        echo '<li>'.$mismatchByCategories[$i][0].' mismatch - '.$mismatchByCategories[$i][1].'</li>';
+    }
+    echo '</ul>';
 ?>
